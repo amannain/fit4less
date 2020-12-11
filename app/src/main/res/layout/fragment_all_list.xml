@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.AllListFragment">
+
+    <RelativeLayout
+        android:id="@+id/homeFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svAllList"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorTextLightGrey"
+            android:contextClickable="true"
+            android:elevation="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:defaultQueryHint="Name"
+            app:iconifiedByDefault="false" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAllList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/svAllList"
+            android:layout_marginTop="5dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addNew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@android:drawable/ic_menu_edit" />
+    </RelativeLayout>
+
+</layout>
