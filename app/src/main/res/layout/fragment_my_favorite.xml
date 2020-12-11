@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MyFavoriteFragment">
+
+    <RelativeLayout
+        android:id="@+id/homeFrame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/svMyFav"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorTextLightGrey"
+            android:contextClickable="true"
+            android:elevation="5dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:defaultQueryHint="Name"
+            app:iconifiedByDefault="false" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMyFav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/svMyFav"
+            android:layout_marginTop="5dp" />
+    </RelativeLayout>
+
+</layout>
